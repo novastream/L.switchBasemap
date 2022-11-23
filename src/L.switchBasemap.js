@@ -62,7 +62,7 @@ L.Control.basemapsSwitcher = L.Control.extend({
 
             this.container.append(imgContainer);
 
-        })
+        });
     },
 
     _removeLayers(layer) {
@@ -71,7 +71,7 @@ L.Control.basemapsSwitcher = L.Control.extend({
             if(obj.layer._leaflet_id !== layer._leaflet_id && obj.layer?._map) {
                 this._map.removeLayer(obj.layer);
             }
-        })
+        });
     },
 
     _collapse() {
@@ -83,7 +83,7 @@ L.Control.basemapsSwitcher = L.Control.extend({
                 let check = child.querySelector('.check');
                 check.classList.remove('activeMap');
             }
-        })
+        });
 
     },
 
@@ -91,7 +91,7 @@ L.Control.basemapsSwitcher = L.Control.extend({
 
         this.container.childNodes.forEach( (child) => {
             child.classList.remove('hidden');
-        })
+        });
     }
 
 })
